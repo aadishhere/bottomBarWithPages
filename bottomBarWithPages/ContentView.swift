@@ -8,14 +8,34 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var selectedTab: Tab = .home
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            switch selectedTab {
+            case .home:
+                Text("Home Screen")
+                    .font(.largeTitle)
+                    .foregroundColor(.blue)
+            case .tasks:
+                Text("Task Screen")
+                    .font(.largeTitle)
+                    .foregroundColor(.blue)
+            case .calendar:
+                Text("Calendar Screen")
+                    .font(.largeTitle)
+                    .foregroundColor(.blue)
+            case .profile:
+                Text("Profile Screen")
+                    .font(.largeTitle)
+                    .foregroundColor(.blue)
+            }
+
+            VStack {
+                Spacer()
+                BottomTabBarView(selectedTab: $selectedTab)
+            }
         }
-        .padding()
     }
 }
 
