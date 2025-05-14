@@ -22,8 +22,7 @@ struct BottomTabBarView: View {
                 BottomTabBarShape(cutoutX: xOffset)
                     .fill(.blue.opacity(0.7))
                     .frame(height: 100)
-                    .shadow(color: .black.opacity(0.15), radius: 10, x: 0, y: -5)
-                    .animation(.easeInOut(duration: 0.3), value: selectedTab)
+                    
 
                 HStack(spacing: 0) {
                     TabBarButton(icon: "house", label: .home, selectedTab: $selectedTab)

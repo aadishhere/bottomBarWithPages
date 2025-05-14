@@ -9,8 +9,8 @@ import SwiftUI
 
 struct BottomTabBarShape: Shape {
     var cutoutX: CGFloat
-    var cutoutWidth: CGFloat = 40
-    var cutoutDepth: CGFloat = 15
+    var cutoutWidth: CGFloat = 0
+    var cutoutDepth: CGFloat = 0
 
     func path(in rect: CGRect) -> Path {
         let width = rect.width
